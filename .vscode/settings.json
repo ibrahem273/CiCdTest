@@ -1,0 +1,23 @@
+    {
+
+  
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "always"
+
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+        100
+                ],
+    "editor.selectionHighlight": false,
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true
+
+
+
+,
+"dart.flutterSdkPath": "C:\\Users\\ibrahem\\flutter_windows_3.27.2-stable\\flutter",
+"dart.sdkPath": "C:\\dart_3.6.1\\dart-sdk"
+}
