@@ -1,4 +1,6 @@
-# image: ubuntu:latest
+image: ghcr.io/cirruslabs/flutter
+
+
 stages:
   - lint
 # before_script:
