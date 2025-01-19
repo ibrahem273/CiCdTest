@@ -2,16 +2,6 @@
 stages:
   - lint
 # before_script:
-#   - apt-get update -y
-#   - apt-get install -y curl unzip git ruby ruby-dev bundler openjdk-17-jdk
-
-
-
-#   # Install Firebase CLI
-#   - curl -sL https://firebase.tools | bash
-
-#   # Install Fastlane
-#   - gem install fastlane
 
 lint:
   stage: lint
@@ -21,9 +11,21 @@ lint:
     - curl -L https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.27.2-stable.tar.xz -o flutter.tar.xz
     - tar xf flutter.tar.xz
     - export PATH="$PATH:$(pwd)/flutter/bin"
-    # - cd android  # Navigate to the android folder
-    # - bundle install  # Install Fastlane dependencies
-    # - fastlane android firebase_distribution  # 
+    - apt-get update -y
+    - apt-get install -y curl unzip git ruby ruby-dev bundler openjdk-17-jdk
+
+
+
+  # Install Firebase CLI
+    - curl -sL https://firebase.tools | bash
+
+  # Install Fastlane
+    - gem install fastlane
+
+
+    - cd android  # Navigate to the android folder
+    - bundle install  # Install Fastlane dependencies
+    - fastlane android firebase_distribution  # 
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
 
