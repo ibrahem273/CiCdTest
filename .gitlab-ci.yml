@@ -1,15 +1,13 @@
 stages:
   - lint
-  - build
-  - test
-  - deploy-dev
-  - deploy-prod
 
 lint:
   stage: lint
   script:
-    - cd android && bundle exec firebase_distribution
     - echo "Deploying to Firebase, AWS, etc..."
+    - cd android  # Navigate to the android folder
+    - bundle install  # Install Fastlane dependencies
+    - fastlane android firebase_distribution  # 
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
 
