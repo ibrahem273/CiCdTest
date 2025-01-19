@@ -1,0 +1,16 @@
+stages:
+  - lint
+  - build
+  - test
+  - deploy-dev
+  - deploy-prod
+
+lint:
+  stage: lint
+  script:
+    - cd android && bundle exec firebase_distribution
+    - echo "Deploying to Firebase, AWS, etc..."
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+
