@@ -11,7 +11,7 @@ platform :android do
     app: "1:1084769963721:android:d7a1539abb20741b620718",
     firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
     android_artifact_type: "APK",
-    android_artifact_path: "C:/Users/ibrahem/Desktop/flutter_test/project/build/app/outputs/flutter-apk/app-arm64-v8a-production-release.apk",
+    android_artifact_path: "../build/app/outputs/flutter-apk/app-arm64-v8a-production-release.apk",
     testers: "ibraaibraa123457@gmail.com",
     release_notes: ""
 
