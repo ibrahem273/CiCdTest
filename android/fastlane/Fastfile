@@ -5,6 +5,7 @@ platform :android do
   desc "Lane for android firebase app distribution"
   #the name after lane: is the name of the lane 
   lane :firebase_distribution do
+    sh "flutter clean"
     sh "flutter build apk --release  --flavor Production --target lib/main_production.dart --split-per-abi --no-tree-shake-icons"
     firebase_app_distribution(
     app: "1:1084769963721:android:d7a1539abb20741b620718",
