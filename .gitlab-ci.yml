@@ -5,10 +5,7 @@ stages:
 #   - apt-get update -y
 #   - apt-get install -y curl unzip git ruby ruby-dev bundler openjdk-17-jdk
 
-  # Install Flutter
-  - curl -L https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.27.2-stable.tar.xz -o flutter.tar.xz
-  - tar xf flutter.tar.xz
-  - export PATH="$PATH:$(pwd)/flutter/bin"
+
 
 #   # Install Firebase CLI
 #   - curl -sL https://firebase.tools | bash
@@ -20,6 +17,10 @@ lint:
   stage: lint
   script:
     - echo "Deploying to Firebase, AWS, etc..."
+       # Install Flutter
+    - curl -L https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.27.2-stable.tar.xz -o flutter.tar.xz
+    - tar xf flutter.tar.xz
+    - export PATH="$PATH:$(pwd)/flutter/bin"
     # - cd android  # Navigate to the android folder
     # - bundle install  # Install Fastlane dependencies
     # - fastlane android firebase_distribution  # 
