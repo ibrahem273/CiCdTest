@@ -38,12 +38,12 @@ flavorDimensions "default"
 productFlavors {
     development {
         dimension "default"
-        resValue "string", "app_name", "project development"
+        resValue "string", "app_name", "pos development"
         applicationIdSuffix ".dev"
     }
 production {
         dimension "default"
-        resValue "string", "app_name", "project"
+        resValue "string", "app_name", "pos"
         // applicationIdSuffix ".free"
     }
 
